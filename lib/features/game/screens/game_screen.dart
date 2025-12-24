@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flame/game.dart';
-import '../game/ball_game.dart';
-import '../game/models/game_state.dart';
+import '../ball_game.dart';
+import '../../../core/models/game_state.dart';
 import '../widgets/control_button.dart';
 import '../widgets/game_header.dart';
 import '../widgets/game_status_overlay.dart';
@@ -177,3 +177,4 @@ class _GameScreenState extends State<GameScreen> {
     // Игра перезапустится автоматически через gameFactory
   }
 }
+

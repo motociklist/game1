@@ -1,9 +1,10 @@
 import 'package:flame/components.dart';
-import '../ball_game.dart';
 import 'package:flutter/material.dart';
+import '../ball_game.dart';
 
 /// Компонент шипов
-class SpikeComponent extends PositionComponent with HasGameReference<BallGame> {
+class SpikeComponent extends PositionComponent
+    with HasGameReference<BallGame> {
   final double spikeHeight = 20.0;
 
   SpikeComponent({required Vector2 position, required Vector2 size})

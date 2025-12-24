@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../game/models/game_state.dart';
+import '../../../core/models/game_state.dart';
 
 /// Оверлей для отображения статуса игры
 class GameStatusOverlay extends StatelessWidget {

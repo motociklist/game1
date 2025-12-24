@@ -3,18 +3,18 @@ import 'package:flame/game.dart';
 import 'package:flame/events.dart';
 import 'package:flame/components.dart';
 import 'dart:math' as math;
+import '../../core/constants/game_constants.dart';
+import '../../core/models/game_state.dart';
 import 'components/ball_component.dart';
 import 'components/platform_component.dart';
 import 'components/coin_component.dart';
 import 'components/spike_component.dart';
-import 'constants/game_constants.dart';
-import 'models/game_state.dart';
 
 /// Основной класс игры
 class BallGame extends FlameGame
     with TapCallbacks, HasKeyboardHandlerComponents {
   BallGame({this.onStateChanged, this.onScoreChanged, this.onTotalCoinsChanged})
-    : super();
+      : super();
 
   late BallComponent ball;
   late List<PlatformComponent> platforms;
@@ -373,3 +373,4 @@ class BallGame extends FlameGame
     }
   }
 }
+

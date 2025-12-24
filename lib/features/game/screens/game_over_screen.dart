@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../game/models/game_state.dart';
+import '../../../core/models/game_state.dart';
 
 /// Экран окончания игры (победа/поражение)
 class GameOverScreen extends StatelessWidget {
@@ -46,67 +46,67 @@ class GameOverScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-              // Иконка результата
-              Icon(
-                isWin ? Icons.celebration : Icons.sentiment_very_dissatisfied,
-                size: 120,
-                color: Colors.white,
-              ),
-              const SizedBox(height: 30),
-
-              // Заголовок
-              Text(
-                isWin ? 'ПОБЕДА!' : 'ПОРАЖЕНИЕ',
-                style: const TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                ),
-              ),
-              const SizedBox(height: 20),
-
-              // Сообщение
-              Text(
-                isWin
-                    ? 'Вы собрали все монеты!'
-                    : 'Мячик попал на шипы!',
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: Colors.white70,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 30),
-
-              // Очки
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.3),
-                    width: 2,
+                  // Иконка результата
+                  Icon(
+                    isWin ? Icons.celebration : Icons.sentiment_very_dissatisfied,
+                    size: 120,
+                    color: Colors.white,
                   ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Icon(Icons.star, color: Colors.amber, size: 30),
-                    const SizedBox(width: 10),
-                    Text(
-                      'Очки: $score',
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                  const SizedBox(height: 30),
+
+                  // Заголовок
+                  Text(
+                    isWin ? 'ПОБЕДА!' : 'ПОРАЖЕНИЕ',
+                    style: const TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 2,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+
+                  // Сообщение
+                  Text(
+                    isWin
+                        ? 'Вы собрали все монеты!'
+                        : 'Мячик попал на шипы!',
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.white70,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 30),
+
+                  // Очки
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.2),
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: 0.3),
+                        width: 2,
                       ),
                     ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 50),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(Icons.star, color: Colors.amber, size: 30),
+                        const SizedBox(width: 10),
+                        Text(
+                          'Очки: $score',
+                          style: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 50),
 
                   // Кнопка перезапуска
                   _buildButton(

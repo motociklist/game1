@@ -1,15 +1,16 @@
 import 'package:flame/components.dart';
-import '../ball_game.dart';
 import 'package:flutter/material.dart';
+import '../ball_game.dart';
 
 /// Компонент монеты для сбора
-class CoinComponent extends PositionComponent with HasGameReference<BallGame> {
+class CoinComponent extends PositionComponent
+    with HasGameReference<BallGame> {
   bool isCollected = false;
   final double radius = 15.0;
   double _rotation = 0.0;
 
   CoinComponent({required Vector2 position})
-    : super(position: position, size: Vector2.all(30));
+      : super(position: position, size: Vector2.all(30));
 
   @override
   void update(double dt) {
@@ -79,3 +80,4 @@ class CoinComponent extends PositionComponent with HasGameReference<BallGame> {
     removeFromParent();
   }
 }
+

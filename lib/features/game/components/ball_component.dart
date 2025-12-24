@@ -1,8 +1,8 @@
 import 'package:flame/components.dart';
-import '../ball_game.dart';
-import '../constants/game_constants.dart';
-import 'platform_component.dart';
 import 'package:flutter/material.dart';
+import '../ball_game.dart';
+import '../../../core/constants/game_constants.dart';
+import 'platform_component.dart';
 
 /// Компонент мячика с физикой
 class BallComponent extends PositionComponent with HasGameReference<BallGame> {
@@ -10,10 +10,10 @@ class BallComponent extends PositionComponent with HasGameReference<BallGame> {
   bool isOnGround = false;
 
   BallComponent({required Vector2 position})
-    : super(
-        position: position,
-        size: Vector2.all(GameConstants.ballRadius * 2),
-      );
+      : super(
+          position: position,
+          size: Vector2.all(GameConstants.ballRadius * 2),
+        );
 
   @override
   Future<void> onLoad() async {
@@ -192,3 +192,4 @@ class BallComponent extends PositionComponent with HasGameReference<BallGame> {
     }
   }
 }
+

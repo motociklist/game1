@@ -1,10 +1,11 @@
 import 'package:flame/components.dart';
-import '../ball_game.dart';
-import '../constants/game_constants.dart';
 import 'package:flutter/material.dart';
+import '../ball_game.dart';
+import '../../../core/constants/game_constants.dart';
 
 /// Компонент платформы
-class PlatformComponent extends PositionComponent with HasGameReference<BallGame> {
+class PlatformComponent extends PositionComponent
+    with HasGameReference<BallGame> {
   PlatformComponent({required Vector2 position, required Vector2 size})
       : super(position: position, size: size);
 
